@@ -1,0 +1,181 @@
+-------------------------------------------File Navigations-------------------
+cd -return to home directory
+cd 'location name' - direct or return to specific directory
+ls or ls -la- list directory contents
+ls -a  - to see hidden contents also
+pwd - show current directory 
+
+
+tree- shows the  structure of file or directory
+
+------------------------------------file operations-----------------------------------------
+mkdir -p parent/child - craete nested directories
+mkdir name- creates a new directory
+touch - creates a new empty file 
+rmdir -removes the directory
+rm -  removes the file
+rm -r - deletes the directory
+mv oldname.txt newname.txt # Rename a file
+mv file.txt /new/location/ # Move file to another directory
+mv oldname.txt newname.txt # Rename a file
+mv file.txt /new/location/ # Move file to another directory
+-----------------------------------File Viewing---------------------------------------------
+cat #Concatenate and display file content
+more # View file content one screen at a time
+less #View file content with backward movement
+head -n 10 file.txt  # Show first 10 lines
+tail -n 10 file.txt  # Show last 10 lines
+tail -f logfile.txt  # Continuously monitor a log file
+--------------------------General------------------------------------------------------------
+echo sometext #prints out the text arguments to the display
+date# to see the date 
+who # who are the logins
+whoami# who is me
+. (current directory)# This is the directory you are currently in.
+.. (parent directory)# Takes you to the directory above your current.
+~ (home directory)# This directory defaults to your “home directory”. Such as /home/pete.
+- (previous directory)# This will take you to the previous directory you were just at.
+ls -R  # recursively list directory contents
+ls -r  # reverse order while sorting
+ls -t  # sort by modification time, newest first
+file # to find the type of file
+/ - to search
+history #to check history of previous commands
+clear # to clear the terminal
+find # to find a file or directory
+
+
+----------------------text -fu----------------------------------
+echo hello >>sam.txt or any filename #add content to the file(stdout)(>)
+(>)cmd <onefile>second file - transmits the data based on the command fro one to second (second file as output)(stdin)
+env # to see environmental variables
+cut -f 2 sample.txt # to extract the contents
+paste -s filename # to pate the contents
+join #join the two files
+sort -r #reverse sort
+sort -n  #sort via numerical value
+tr a-z A-Z #translates from lower to uppecase 
+
+-----------------------Advanced text-fu--------------------------------
+Vim - opens a text editor
+wq #save and exit
+:q! exit without the save 
+------------------in editor0----------------------
+i - insert text before the cursor
+O - insert text on the previous line
+o - insert text on the next line
+a - append text after the cursor
+A - append text at the end of the line
+x - used to cut the selected text also used for deleting characters
+dd - used to delete the current line
+y - yank or copy whatever is selected
+yy - yank or copy the current line
+p - paste the copied text before the cursor
+
+:w - writes or saves the file
+:q - quit out of vim
+:wq - write and then quit
+:q! - quit out of vim without saving the file
+ZZ - equivalent of :wq, but one character faster
+u - undo your last action
+Ctrl-r - redo your last action
+-----------------------------User Management-----------------
+ cat /etc/shadow # to view a protected file like /etc/shadow
+su #to run user command
+/etc/shadow#sed to store information about user authentication. It requires superuser read permissions.
+sudo useradd bob # to add the user
+sudo userdel bob # to delete the user
+passwd # to change password
+
+--------------------------Permissions----------------------------
+r: readable
+w: writable
+x: executable (basically an executable program)
+-: empty
+
+
+Modifying permissions is done with cmd: chmod
+
+Adding permission bit on a file
+$ chmod u+x myfile
+
+Removing permission bit on a file
+
+$ chmod u-x myfile
+Adding multiple permission bits on a file
+
+$ chmod ug+w
+
+4: read permission
+2: write permission
+1: execute permission 
+
+-----------------------------------Process---------------------------------
+top #to see task manager
+
+
+
+-----------------------------Packages------------------------------
+gzip # to compress file
+gunzip file.gz # to decompress
+
+to install a package 
+Debian:$dpkg -i _________.deb
+for remove 
+dpkg -r --------------.db	
+
+
+sudo parted -l #views the partitions
+df - #to see th file
+df -T #to see the file partitions
+df -h utilization of disk
+stat - to check the statistics
+
+List services
+
+$ service --status-all
+Start a service
+
+$ sudo service networking start
+Stop a service
+
+$ sudo service networking stop
+Restart a service
+
+$ sudo service networking restart
+
+To shutdown your system:
+
+$ sudo shutdown -h now
+
+
+---------------------------Process utilization---------------------------------
+top #task manager
+lsof . #short for list open files
+ps m # to view process threads
+uptime #cpu monitoring
+iostat #i/o monitoring 
+vmstat #memory stating
+crontab -e create and edt the crontab file(like editors)
+
+----------------------------------logging--------------------------------------------
+logger -s messages- to see the logger messages
+
+---------------------------------file sharing -----------------------
+To copy a file over from local host to a remote host
+
+$ scp myfile.txt username@remotehost.com:/remote/directory
+To copy a file from a remote host to your local host
+
+$ scp username@remotehost.com:/remote/directory/myfile.txt /local/directory
+To copy over a directory from your local host to a remote host
+
+$ scp -r mydir username@remotehost.com:/remote/directory
+
+python -m SimpleHTTPServer # SimpleHTTPServe
+
+Setting up NFS client
+
+$ sudo service nfsclient start
+
+$ sudo mount server:/directory /mount_directory
