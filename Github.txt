@@ -1,0 +1,30 @@
+---------------------------------------------git-----------------------------------
+GitHub is a cloud-based platform where you can store, share, and work together with others to write code.
+Storing your code in a "repository" on GitHub allows you to:
+
+    Showcase or share your work.
+    Track and manage changes to your code over time.
+    Let others review your code, and make suggestions to improve it.
+    Collaborate on a shared project, without worrying that your changes will impact the work of your collaborators before you're ready to integrate them.
+
+--------------------------------------methods---------------------------------------------
+
+    Pull #all the latest changes made by your collaborators from the remote repository on GitHub.
+    Push #back your own changes to the same remote repository on GitHub.
+
+
+---------------------------------------pull request workflow----------------------------
+
+Step 1: Create a repository
+Step 2: Create a branch
+Step 3: Make and commit changes
+Step 4: Open a pull request
+Step 5: Merge your pull request
+
+---------------------------------------Uploading a project to GitHub------------------------
+
+    Step 1: Create a new repository for your project
+    Step 2: Upload files to your project's repository
+    Step 3: Edit the README file for your project's repository
+----------------------------------the process-----------------------------------------------
+

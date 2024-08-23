@@ -1,0 +1,336 @@
+-------------------------------------------aws------------------------------------
+#cloud computing platform
+#s3(2006)
+#largest cloud provider 
+---------------------------------Client-Server Model---------------------------------------
+#client that interacts and makes requests to a computer server.
+#client is the way that the person interact with the server.
+#The server does tasks for the client and returns information.
+---------------------------------Deployment Models---------------------------------
+
+There are three different kinds of deployment models:
+
+    Cloud-based
+    On-premises
+    Hybrid
+
+The models are different ways of accessing compute services - over the internet, locally, or in a combination.
+
+--------------------------------Cloud Based Deployment--------------------------------
+#runs in cloud
+#model allows you to build new applications or move existing ones to the cloud.
+#different level of services ranging from low to high.
+#The level of service depends on management,architecting and infrasrtructure
+#For example, a company might create an application consisting of virtual servers, databases, and networking components entirely based in the cloud.
+----------------------------------------on-premises----------------------------------------
+#deploy resources by using virtualization and resource management.
+#known as private cloud deployment.
+# local (on pre-misses data center)
+--------------------------------------Hybrid------------------------------------------
+#connect cloud resources to on premises
+---------------------------------------Cloud benefits--------------------------------
+
+    Cost savings
+    Security
+    Scalability
+    Flexibility
+
+---------------------------------------AWS Cloud EC2----------------------------------
+virtual server in AWS cloud
+AWS EC2 for AWS Elastic Cloud Compute
+scaling of capacity up and down is easy
+ 
+------Why-------------------
+#process of increasing and decrceasing is easier
+#No upfront investment is needed.
+#You only pay for what you need.
+#EC2 is secure.
+
+----Process------
+lauch --> connect ---> Use
+----------------------------ec2 types--------------------------------------------------
+General Purpose Instance
+	balances computing, memory, and networking resources.
+Such as:
+
+    Application servers
+    Gaming servers
+    Backend servers for companies
+    Small and medium databases
+
+Compute Optimized Instances
+#high compute.
+#deal for high-performance and compute-intensive needs.
+
+Memory Optimized Instances
+#can deliver large dataset workloads fast
+#
+
+
+Storage Optimized Instances
+
+#This type is best when you have large datasets on local storage.
+
+#Some examples:
+
+    Large file systems
+    Data warehouses
+    Online transaction systems
+
+Accelerated Computing Instances
+
+	#This type use hardware accelerators.
+
+	#The accelerators boost the data processing.
+
+	#The Accelerated Computing Instances are best for graphics applications and streaming.
+
+Storage Optimized Instances
+
+#This type is best when you have large datasets on local storage.
+
+Some examples:
+
+    Large file systems
+    Data warehouses
+    Online transaction systems
+
+The Storage Optimized Instances are designed to deliver many inputs as fast as possible.
+
+---------------------------------------EC2 pricing------------------------------------
+
+You only pay for the compute time that you use.
+
+It offers different pricing options.
+
+1.Ondemand instances
+2.AWS Ec2Saving plans
+3.Reserverd instances
+4Spot instances
+5.Dedicated host
+
+-------------------------------------EC2 Scaling----------------------------------------
+AWS EC2 Auto Scaling allows you to add or remove EC2 instances automatically.
+
+It automates the capacity to the demand.
+
+There are two approaches:
+
+    Dynamic scaling: responds to changing demand
+    Predictive scaling: schedules the number of instances based on a predicted demand
+    Dynamic and Predictive scaling can be combined to scale faster
+
+
+The Auto Scaling groups allow you to have a dynamic environment.
+
+You set the minimum capacity, the desired number, and the maximum capacity.
+
+The group will operate within the config and give you a predictable and cost-effective architecture.
+-----------------AWS Cloud Elastic Load Balancing--------------------------------
+To support increased traffic without increasing the hourly cost.
+Scales automatically
+ ------------------------AWS SNS - Simple Notification Service--------------------------
+fully managed publish-subscribe messaging and mobile communication service
+ event-driven, with automated services responding to triggers.
+Message Endpoints
+
+AWS SNS can publish messages to many different endpoints:
+
+    HTTP and HTTPS
+    Email and Email-JSON
+    AWS SQS
+    Applications
+    AWS Lambda
+    SMS (depending on region)
+------------------------AWS SQS - Simple Queue Service-----------------------------
+SQS is a message queuing service.
+
+It exchanges and stores messages between software components.
+
+The service adds the messages in a queue.
+
+Users or services pick up the messages from the queue.
+
+-----------------------------AWS Cloud Serverless---------------------------
+Serverless is a service where you do not have to think about servers.
+
+With serverless, you only have to think about code.
+
+The cloud provider handles all infrastructure behind it.
+
+AWS has a serverless service called AWS Lambda.
+
+-----------------------AWS Cloud Lambda-----------------------------------
+AWS Lambda a serverless compute service.
+
+This service lets you run code without needing to think about servers.
+
+How AWS Lambda Works
+
+The high-level steps to understand the concept:
+
+    Deploy your code to Lambda
+    Make the code ready to trigger an event
+    The code only runs when triggered
+    Pay only when your code is running
+---------------------------AWS Cloud Containers------------------------------
+deploying and managing applications in the cloud
+Container orchestration services help you deploy, manage, and scale your containerized applications.
+----------------------------AWS ECS - Elastic Container Service-------------------
+run containerized applications.
+built for scale and high performance.
+#CS supports Docker.
+
+Docker is a platform that helps you build, test, and deploy applications.
+
+
+
+-----------------AWS EKS - Elastic Kubernetes Service-------------------------
+EKS is a managed service that lets you run Kubernetes on AWS.
+
+It is built for scaling with Kubernetes.
+What is Kubernetes?
+
+Kubernetes is open-source software.
+
+It helps you deploy and manage containerized applications.
+
+Kubernetes has a large community.
+
+AWS continuously keeps the AWS EKS service updated to the latest Kubernetes features.
+
+Deploy applications in different ways:
+
+    Cloud Deployment
+    Deployment on your infrastructure
+    Deployment with your tools
+-----------------------------AWS Cloud Fargate----------------------
+ to deploy and manage applications.
+Fargate manages the infrastructure for you.
+
+How AWS Fargate Works
+	It is a serverless service.
+	Fargate has a pay-as-you-go pricing model.
+	It lets you focus on doing the most important thing, building your awesome applications.
+-------------------------------AWS Cloud Resource Provisioning-------------------
+three main ways to interact with AWS services.
+1.AWS Management Console
+	web-based interface
+	access and manage web services
+	mobile application
+	monitoring and billing info
+2.CLI -Command line interface
+	saves time when making API requests
+	allows you to control multiple AWs services
+	automate actions
+3.SDK 
+	 access and manage web services 
+	services done throu gh api
+	supports programming languages
+
+-----------------------------AWS Cloud Provision Services-------------------------------
+AWS offers two managed tools: AWS Elastic Beanstalk and AWS CloudFormation.
+1.AWS Elastic Beanstalk
+
+    Adjust capacity
+    Load balancing
+    Automatic scaling
+    Application health monitoring
+
+------------------------------------AWS Cloud Elastic Beanstalk--------------------------
+orchestration service.
+a web infrastructure management service.
+ handles deployment and scaling for web applications and services.
+
+Elastic Beanstalk helps automatically manage AWS services' setup, configuration, scaling and provisioning.
+AWS Elastic Beanstalk Supported Platforms
+
+Elastic Beanstalk supports many platforms such as:
+
+    Docker
+    Go
+    Java
+    Java with Tomcat
+    .NET
+    Node.js
+    PHP
+    Python
+    Ruby
+
+
+
+Automatically managed AWS services: AWS EC2 (Elastic Compute Cloud), Amazon S3 (Simple Storage Service), AWS RDS (Relational Database Service), Amazon DynamoDB, and Amazon SimpleDB.
+----------------------------------------AWS Cloud Networking---------------------------
+AWS Virtual Private Cloud
+	 isolated network.
+	Resources can be organized in subnets.
+
+Internet Gateway
+	Public traffic can be allowed to your VPC.
+
+	The traffic is allowed by an Internet Gateway.
+
+Virtual Private Gateway
+	used to access private resources in the VPC.
+	It has extra layers of protection.
+
+---------------------------------------------------AWS Cloud Subnet and Access---------------------
+
+Subnets
+A Subnet is a section of a VPC.
+
+The Subnet allows you to group resources.
+
+The groupings can have different security or operations needs.
+
+You can have both public and private Subnets.
+
+----------------------------------------AWS Cloud Global Networking--------------------
+DNS - service that lets someone access your website from the browsers
+dns is like phonebook
+connects ip to domain name
+
+-----------------------------------AWS Instance Stores-------------------------
+storage volume act as physical hard drive
+temporary storage for EC2
+---------------------------------------AWS EBS - Elastic Block Store---------------
+provides storage volumes
+backup the data with AWS EBS snapshots
+
+AWS EBS Snapshots
+	incremental data backup.
+	stores as additional backup byduplicating
+
+
+--------------------------------------AWS S3 - Simple Storage Service-------------------
+S3 is a storage service.
+
+It allows uploading any type of file.
+
+In S3 you can set access permissions to a file.
+
+It is object-level storage.
+The maximum file size is 5 TB.
+
+Object-Level Storage
+
+Object-level storage contains objects.
+
+Each object is made of:
+
+    Data - any type of file
+    Metadata - information about what the data is
+    Key - unique identifier
+
+----------------------------------------AWS EFS - Elastic File System-----------------------
+file system
+Scaling AWS EFS does not disrupt applications.
+---------------------------------------AWS RDS - Relational Database Service---------------
+automate tasks
+ enables running relational databases in AWS Cloud.
+relational database ideal for large organizations and enterprises.
+
+------------------------------------------AWS Cloud DynamoDB-------------------------
+AWS DynamoDB is a non-relational, NoSQL database.
+It is a serverless database.
+DynamoDB is a high performance service.
