@@ -1,0 +1,69 @@
+ website --------------------------------------
+ 
+#first want to get or rent the server by physical or by virtual.
+#install software
+#capacity to handle more visitors
+#storage for website & files
+#manage technical issues(like dto,server crash,ect.,)
+
+
+to resolve this  aws is used 
+
+no physical server is needed ,we use cloud server as rent 
+
+#capacity ---------->AWS--------------> Increase resources(Disk spacemCpu power, RAM))
+#pay as we use
+
+------------------Provide services like -------------------------
+#devops(deployment) --code commit,code deploy,codepipeline,cloudwatch,cloud formation,config,opswork,service catalog
+#mobile -cognito,mobile analytics, sns,device farm,mobile hub
+#Application - API gateway,cloudsearch,ses,sqs,swf
+#Database- Dynamodb,elastic cache, rds,redshift,migration service
+#infra - EC2,labda,elastic load balancing ,ecs,cloudfront,glacier,s3,gateway,VPC
+#analytics-- Kinesis,ML,EMR,Elastic search,data pipeline
+#Security-ACM,inspector,cloudHSM
+------------------------------------EC2---------------------
+we can switch on/off  when needed 
+Most used service 
+to create server
+can say as =virtual computer"
+
+Virtual  computer ---------->lives in internet
+                     |---------->CPU
+
+		     |---------->RAM
+		     |---------->Storage
+		     |----------->Network connections
+
+Virtual offers this based on ou user and need
+
+Virtual computer -------------->increase RAM,change cpu,increase storage
+but with charges
+
+Virtual computer are called as instances
+
+-------------------------------------Creating Virtual Server----------------
+--Application Machine Image--
+act as template ---------->OS(linux/windows)
+		|----------->Softwares(Mysql,postgresql)
+		|---------->Security settings, network settings
+
+
+
+Lauch instance -..> give server name in name field --------->Application  Machine Image |
+											 |						(security groups)
+											|-->Instance type--->key pair(login details)---->network(vpc)(firewall)---->security--->config storage-->launch instance--running
+
+to create virtual server we use 
+	#EC 2  for services
+	#EBS (storage)
+	#VPC(Network)
+	#Route 53 (Domain name)
+	
+ 
+
+
+
+
+----------------------S3-------------------------------------
+# mainly for the storage for the files 
