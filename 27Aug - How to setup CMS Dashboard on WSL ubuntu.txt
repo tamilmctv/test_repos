@@ -1,0 +1,22 @@
+unning Dashboard Project-----------------------------------
+
+# first copy the file from the local window to local ubuntu
+      -------------to copy------------
+run ubuntu 
+	#home directory by cd command --------->ls -------->cd mnt------------->location of file that stored in disk( cd e)------> cd Dotnet--->cd Dashboard file
+	# after locating to folder by copy command copy  or move the folder to the home directory of linux (cd)
+	#check the file is copied or not 
+
+	#Now open the folder CMS-Dashboard by ls command u can see the files 
+	#then we have to install all the requirements
+
+Requirements:
+	
+	1)sudo apt install nodejs npm (install  latest version of nodejs)(https://nodejs.org/en/download/package-manager)
+	#to check version
+		-node -v
+		-npm -v
+	2) Install ionic (sudo npm install -g @ionic/cli)
+	3) to run (ionic serve in terminal)
+
+
