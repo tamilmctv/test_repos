@@ -1,0 +1,4501 @@
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+-----------------------------------Running CMS -App master project--------------
+1.Install the SDK --refer this --> (https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install?tabs=dotnet8&pivots=os-linux-ubuntu-2404)
+
+		#dotnet --version --> to check the version
+2.Now build the project the project of API and DTO in window and locate the build file and copy to the wsl local ubuntu
+
+3.then locate to directory and run the file :
+		#dotnet CMS.API.dll
+         
+	#now check in browser by the given localhost
+
+
+---------------------------------For SQL connection-------------------------------------------------------------------------------------------
+	#SELECT User, Host FROM mysql.user WHERE User='bvc';
+	#CREATE USER 'bvc'@'localhost' IDENTIFIED BY 'bvc24';
+	#GRANT ALL PRIVILEGES ON *.* TO 'bvc'@'localhost';
+	#FLUSH PRIVILEGES;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""Process"""""""""""""""""""""""""
+tamil@Software:~$ mkdir App_master
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/DTO/bin/Debug/net8.0 ~/App_master/DTO
+sending incremental file list
+created directory /home/tamil/App_master/DTO
+net8.0/
+net8.0/CMS.Dto.deps.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+
+sent 179,991 bytes  received 126 bytes  360,234.00 bytes/sec
+total size is 179,689  speedup is 1.00
+tamil@Software:~$ ls
+App_master  CMS-Dashboard-master  CMS-Dashboard-master.zip  aws  awscliv2.zip  cal  snap  tamil-work-repo  test_key.pem  test_repos
+tamil@Software:~$ rsync -av /mnt/e/Dotnet/CMS-App-master/API/bin/Debug/net8.0 ~/App_master/API
+sending incremental file list
+created directory /home/tamil/App_master/API
+net8.0/
+net8.0/BouncyCastle.Cryptography.dll
+net8.0/CMS.API.deps.json
+net8.0/CMS.API.dll
+net8.0/CMS.API.exe
+net8.0/CMS.API.pdb
+net8.0/CMS.API.runtimeconfig.json
+net8.0/CMS.Dto.dll
+net8.0/CMS.Dto.pdb
+net8.0/Enums.NET.dll
+net8.0/ExtendedNumerics.BigDecimal.dll
+net8.0/ICSharpCode.SharpZipLib.dll
+net8.0/MailKit.dll
+net8.0/Mapster.Core.dll
+net8.0/Mapster.dll
+net8.0/MathNet.Numerics.dll
+net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+net8.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+net8.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+net8.0/Microsoft.EntityFrameworkCore.Relational.dll
+net8.0/Microsoft.EntityFrameworkCore.dll
+net8.0/Microsoft.Extensions.Identity.Core.dll
+net8.0/Microsoft.Extensions.Identity.Stores.dll
+net8.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+net8.0/Microsoft.Extensions.Options.dll
+net8.0/Microsoft.IO.RecyclableMemoryStream.dll
+net8.0/Microsoft.IdentityModel.Abstractions.dll
+net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+net8.0/Microsoft.IdentityModel.Logging.dll
+net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+net8.0/Microsoft.IdentityModel.Protocols.dll
+net8.0/Microsoft.IdentityModel.Tokens.dll
+net8.0/Microsoft.Win32.SystemEvents.dll
+net8.0/MimeKit.dll
+net8.0/MySqlConnector.dll
+net8.0/NPOI.Core.dll
+net8.0/NPOI.OOXML.dll
+net8.0/NPOI.OpenXml4Net.dll
+net8.0/NPOI.OpenXmlFormats.dll
+net8.0/Newtonsoft.Json.dll
+net8.0/Pomelo.EntityFrameworkCore.MySql.dll
+net8.0/QRCoder.dll
+net8.0/SixLabors.Fonts.dll
+net8.0/SixLabors.ImageSharp.dll
+net8.0/System.Configuration.ConfigurationManager.dll
+net8.0/System.Drawing.Common.dll
+net8.0/System.Formats.Asn1.dll
+net8.0/System.IdentityModel.Tokens.Jwt.dll
+net8.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/System.Security.Permissions.dll
+net8.0/System.Windows.Extensions.dll
+net8.0/UPIKit.dll
+net8.0/appsettings.Development.json
+net8.0/appsettings.Production.json
+net8.0/appsettings.json
+net8.0/log4net.config
+net8.0/log4net.dll
+net8.0/Certificates/
+net8.0/Certificates/ICICI/
+net8.0/Certificates/ICICI/Eshwar/
+net8.0/Certificates/ICICI/Eshwar/icici-public.txt
+net8.0/Certificates/ICICI/Eshwar/privatekeyrsa.pem
+net8.0/Images/
+net8.0/Images/Categories/
+net8.0/Images/Products/
+net8.0/logs/
+net8.0/logs/2024-08-27.log
+net8.0/logs/2024-08-28.log
+net8.0/logs/2024-08-30.log
+net8.0/reports/
+net8.0/reports/emails/
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-16Aug2024.xls
+net8.0/reports/emails/AutomatedDailyReport-BVCVM1-26Aug2024.xls
+net8.0/runtimes/
+net8.0/runtimes/unix/
+net8.0/runtimes/unix/lib/
+net8.0/runtimes/unix/lib/net6.0/
+net8.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/
+net8.0/runtimes/win/lib/
+net8.0/runtimes/win/lib/net6.0/
+net8.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+net8.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+
+sent 32,031,258 bytes  received 1,483 bytes  9,152,211.71 bytes/sec
+total size is 32,017,950  speedup is 1.00
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ cd
+tamil@Software:~$ cd App_master/
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ ls
+API  DTO
+tamil@Software:~/App_master$ cd API
+tamil@Software:~/App_master/API$ ls
+net8.0
+tamil@Software:~/App_master/API$ cd net8.0/
+tamil@Software:~/App_master/API/net8.0$ dotnet CMS.API.dll
+
+####################output#######################################################
+
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {be156e45-c197-4463-a5eb-ab525aa32e05} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/tamil/App_master/API/net8.0
+
