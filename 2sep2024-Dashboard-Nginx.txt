@@ -1,0 +1,326 @@
+#########----------------->CMS Dashboard on nginx----------------------------##################
+
+1.Build the Angular Application:
+		#ionic build --prod
+
+2.Create a Directory for Your Application:
+	#sudo mkdir -p /var/www/dashboard
+
+3.Copy Build Files:
+	#sudo cp -r ~/CMS-Dashboard-master/www/* /var/www/dashboard/
+
+4.Configure Nginx:
+
+	#sudo nano /etc/nginx/sites-available/dashboard.tamil.com
+
+	Add the following :
+	server {
+    listen 80;
+    server_name dashboard.tamil.com;
+
+    root /var/www/CMS-Dashboard-master/browser;  # Adjust this path if needed
+
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Optional: Configure logging
+    access_log /var/log/nginx/dashboard.tamil.com.access.log;
+    error_log /var/log/nginx/dashboard.tamil.com.error.log;
+}
+
+
+#ADD permissions---------------------------------------------------------------------
+sudo chmod 755 /home/tamil/CMS-Dashboard-master
+
+
+5.Enable the Configuration:
+	#sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+
+6.Test Nginx Configuration:
+	#sudo nginx -t
+
+7. Update /etc/hosts for Testing
+	#sudo nano /etc/hosts
+	add the following:
+		127.0.0.1   dashboard.tamil.com
+
+
+-----------in windows-------------------------------------------------------------------------
+in notepad open this file C:\Windows\System32\drivers\etc and select hosts
+Add the following line:
+Copy code
+127.0.0.1   dashboard.tamil.com
+Save the file.
+
+
+
+###########################################Processs###########################################
+tamil@Software:~$ cd CMS-Dashboard-master/
+tamil@Software:~/CMS-Dashboard-master$ ls
+README.md            icon.png           ngsw-config.json   package.json       tsconfig.json
+angular.json         ionic.config.json  node_modules       src                tsconfig.spec.json
+capacitor.config.ts  karma.conf.js      package-lock.json  tsconfig.app.json
+tamil@Software:~/CMS-Dashboard-master$ ionic build --prod
+> ng run app:build:production
+
+Initial chunk files   | Names                 |  Raw size
+chunk-BG5WHARS.js     | -                     |   1.54 MB |
+chunk-KE6IXFKW.js     | -                     |   1.41 MB |
+scripts-MSFQIDRI.js   | scripts               | 694.12 kB |
+styles-WI7EXNR2.css   | styles                | 262.01 kB |
+chunk-K2VT6VFC.js     | -                     | 212.41 kB |
+main-L22MA5X6.js      | main                  | 186.32 kB |
+chunk-NWDZIVXG.js     | -                     | 100.19 kB |
+chunk-HZRP42L2.js     | -                     |  90.49 kB |
+polyfills-HPWXI36B.js | polyfills             |  86.31 kB |
+chunk-Q3Y23F3A.js     | -                     |  76.72 kB |
+chunk-TM75M2CI.js     | -                     |  27.09 kB |
+chunk-3LPM4U3M.js     | -                     |  26.00 kB |
+chunk-TDAJ5TUI.js     | -                     |  25.96 kB |
+chunk-UCFYK5O2.js     | -                     |  18.71 kB |
+chunk-6SBHMYRM.js     | -                     |  16.61 kB |
+chunk-GHFEINSK.js     | -                     |  14.78 kB |
+chunk-SE6JE7YY.js     | -                     |  13.09 kB |
+chunk-CWZWQH7W.js     | -                     |  12.73 kB |
+chunk-Q2LVCW5Y.js     | -                     |  10.09 kB |
+chunk-HQLQVPAB.js     | -                     |   8.33 kB |
+chunk-XCCE6HAF.js     | -                     |   8.00 kB |
+chunk-SAFE3T2S.js     | -                     |   7.89 kB |
+chunk-YCY464VT.js     | -                     |   7.17 kB |
+chunk-QZNYZEIB.js     | -                     |   7.15 kB |
+chunk-C6GYRICB.js     | -                     |   6.98 kB |
+chunk-6FAEGOAD.js     | -                     |   6.97 kB |
+chunk-K2HBFHW4.js     | -                     |   4.77 kB |
+chunk-R4QHACMO.js     | -                     |   3.86 kB |
+chunk-ZIPGNGXY.js     | -                     |   3.75 kB |
+chunk-RLZ6WVK4.js     | -                     |   3.65 kB |
+chunk-KJPJBTYR.js     | -                     |   3.16 kB |
+chunk-HNY4SUTK.js     | -                     |   2.93 kB |
+chunk-JRKDJA77.js     | -                     |   2.45 kB |
+chunk-22TI2MCC.js     | -                     |   2.44 kB |
+chunk-JMLPLM2L.js     | -                     |   2.41 kB |
+chunk-EZ7BZKXF.js     | -                     |   2.03 kB |
+chunk-3MLPQI5L.js     | -                     |   1.91 kB |
+chunk-W6SC2ZZR.js     | -                     |   1.88 kB |
+chunk-V63X4CBX.js     | -                     |   1.86 kB |
+chunk-UR6VIRNL.js     | -                     |   1.31 kB |
+chunk-UMGPT34K.js     | -                     |   1.21 kB |
+chunk-OK2MNVMK.js     | -                     | 861 bytes |
+chunk-36T2BHYJ.js     | -                     | 536 bytes |
+chunk-7LRYXUKF.js     | -                     | 530 bytes |
+chunk-KFBF5L4X.js     | -                     | 301 bytes |
+chunk-MIOLVGSM.js     | -                     | 203 bytes |
+chunk-OJO5RD3M.js     | -                     | 197 bytes |
+
+                      | Initial total         |   4.86 MB
+
+Lazy chunk files      | Names                 |  Raw size
+chunk-CCIRGZ6F.js     | dashboard-page        |   1.16 MB |
+chunk-BFEQCF6S.js     | -                     | 722.75 kB |
+chunk-BIS6AETB.js     | core-js               | 141.57 kB |
+chunk-XHYFN22I.js     | ion-datetime_3-entry  | 106.73 kB |
+chunk-GI5ZHABF.js     | ion-item_8-entry      |  60.34 kB |
+chunk-LFVBLXZU.js     | ion-app_8-entry       |  59.17 kB |
+chunk-4X2BAZAN.js     | ion-textarea-entry    |  50.20 kB |
+chunk-UGWGESZQ.js     | ion-select_3-entry    |  48.26 kB |
+chunk-4ADVFC3O.js     | ion-modal-entry       |  47.85 kB |
+chunk-XPM3BAJL.js     | ion-input-entry       |  45.22 kB |
+chunk-TXYD2H72.js     | ion-popover-entry     |  42.50 kB |
+chunk-L6BVZ26I.js     | ion-alert-entry       |  41.88 kB |
+chunk-4KDTLNJV.js     | ion-refresher_2-entry |  37.49 kB |
+chunk-TCUDHIG2.js     | ion-range-entry       |  35.49 kB |
+chunk-7WFEQ2R2.js     | ion-button_2-entry    |  33.82 kB |
+...and 94 more lazy chunks files. Use "--verbose" to show all the files.
+
+Output location: /home/tamil/CMS-Dashboard-master/www
+
+Application bundle generation complete. [11.036 seconds]
+
+▲ [WARNING] The glob pattern import("./**/*.entry.js*") did not match any files [empty-glob]
+
+    node_modules/@stencil/core/internal/client/index.js:2906:4:
+      2906 │     `./${bundleId}.entry.js${BUILD24.hotModuleReplacement && hmr...
+           ╵     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] bundle initial exceeded maximum budget. Budget 2.00 MB was not met by 2.86 MB with a total of 4.86 MB.
+
+
+tamil@Software:~/CMS-Dashboard-master$
+tamil@Software:~/CMS-Dashboard-master$ sudo nano /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:~/CMS-Dashboard-master$ sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/dashboard.tamil.com': File exists
+tamil@Software:~/CMS-Dashboard-master$ sudo rm -rf /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+tamil@Software:~/CMS-Dashboard-master$ sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/': No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo rm -rf /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+tamil@Software:~/CMS-Dashboard-master$ ls
+README.md            icon.png           ngsw-config.json   package.json       tsconfig.json
+angular.json         ionic.config.json  node_modules       src                tsconfig.spec.json
+capacitor.config.ts  karma.conf.js      package-lock.json  tsconfig.app.json  www
+tamil@Software:~/CMS-Dashboard-master$ sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/': No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo nano /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:~/CMS-Dashboard-master$ sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/': No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ #sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+tamil@Software:~/CMS-Dashboard-master$ sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/': No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo ls  /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+ls: cannot access '/etc/nginx/sites-enabled/': No such file or directory
+/etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:~/CMS-Dashboard-master$ sudo ls /etc/nginx/sites-available/
+[sudo] password for tamil:
+cms.tamil  cms.tamil.com  dashboard.tamil.com  default
+tamil@Software:~/CMS-Dashboard-master$ ls cms.tamil.com
+ls: cannot access 'cms.tamil.com': No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo cat  cms.tamil.com
+cat: cms.tamil.com: No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo cat cms.tamil.com
+cat: cms.tamil.com: No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo mkdir /etc/nginx/sites-enabled
+tamil@Software:~/CMS-Dashboard-master$ sudo mkdir /etc/nginx/sites-enabled
+mkdir: cannot create directory ‘/etc/nginx/sites-enabled’: File exists
+tamil@Software:~/CMS-Dashboard-master$ sudo ln -s /etc/nginx/sites-available/dashboard.tamil.com /etc/nginx/sites-enabled/
+tamil@Software:~/CMS-Dashboard-master$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+tamil@Software:~/CMS-Dashboard-master$ sudo systemctl reload nginx
+tamil@Software:~/CMS-Dashboard-master$ ls
+README.md     capacitor.config.ts  ionic.config.json  ngsw-config.json  package-lock.json  src                tsconfig.json       www
+angular.json  icon.png             karma.conf.js      node_modules      package.json       tsconfig.app.json  tsconfig.spec.json
+tamil@Software:~/CMS-Dashboard-master$ sudo cp -r ~/CMS-Dashboard-master/www/* /var/www/dashboard/
+tamil@Software:~/CMS-Dashboard-master$ sudo cp -r ~/CMS-Dashboard-master/www/* /var/www/CMS-Dashboard/
+cp: target '/var/www/CMS-Dashboard/': No such file or directory
+tamil@Software:~/CMS-Dashboard-master$ sudo mkdir -p /var/www/CMS-Dashboard/
+tamil@Software:~/CMS-Dashboard-master$ sudo cp -r ~/CMS-Dashboard-master/www/* /var/www/CMS-Dashboard/
+tamil@Software:~/CMS-Dashboard-master$ ls
+README.md     capacitor.config.ts  ionic.config.json  ngsw-config.json  package-lock.json  src                tsconfig.json       www
+angular.json  icon.png             karma.conf.js      node_modules      package.json       tsconfig.app.json  tsconfig.spec.json
+tamil@Software:~/CMS-Dashboard-master$ sudo mkdir -p /var/www/CMS-Dashboard/
+tamil@Software:~/CMS-Dashboard-master$ sudo cp -r ~/CMS-Dashboard-master/www/* /var/www/CMS-Dashboard/
+tamil@Software:~/CMS-Dashboard-master$ sudo cd /var/www/CMS-Dashboard/
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+tamil@Software:~/CMS-Dashboard-master$  cd /var/www/CMS-Dashboard/
+tamil@Software:/var/www/CMS-Dashboard$ ls
+3rdpartylicenses.txt  browser
+tamil@Software:/var/www/CMS-Dashboard$ sudo nano /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:/var/www/CMS-Dashboard$ sudo systemctl reload nginx
+tamil@Software:/var/www/CMS-Dashboard$ sudo nano /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:/var/www/CMS-Dashboard$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.121.83  netmask 255.255.240.0  broadcast 172.17.127.255
+        inet6 fe80::215:5dff:fefe:5089  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:fe:50:89  txqueuelen 1000  (Ethernet)
+        RX packets 442582  bytes 1704603951 (1.7 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 288123  bytes 30145391 (30.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 6386  bytes 4965372 (4.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 6386  bytes 4965372 (4.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tamil@Software:/var/www/CMS-Dashboard$ sudo nano /etc/hosts
+tamil@Software:/var/www/CMS-Dashboard$ ls -l /etc/nginx/sites-enabled/
+total 0
+lrwxrwxrwx 1 root root 46 Sep  2 11:52 dashboard.tamil.com -> /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:/var/www/CMS-Dashboard$ sudo chown -R www-data:www-data /var/www/CMS-Dashboard/
+do chmod -R 755 /var/www/CMS-Dashboard/
+sudo chmod -R 755 /var/www/CMS-Dashboard/
+tamil@Software:/var/www/CMS-Dashboard$ sudo chown -R www-data:www-data /var/www/CMS-Dashboard/
+tamil@Software:/var/www/CMS-Dashboard$ sudo chmod -R 755 /var/www/CMS-Dashboard/
+tamil@Software:/var/www/CMS-Dashboard$ sudo tail -f /var/log/nginx/error.log
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [error] 4880#4880: *4 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+^C
+tamil@Software:/var/www/CMS-Dashboard$ # Check permissions
+tamil@Software:/var/www/CMS-Dashboard$ ls -l /home/tamil/CMS-Dashboard-master/www/index.html
+
+# Change permissions ls: cannot access '/home/tamil/CMS-Dashboard-master/www/index.html': No such file or directory
+if necessary
+sudtamil@Software:/var/www/CMS-Dashboard$
+tamil@Software:/var/www/CMS-Dashboard$ # Change permissions if necessary
+tamil@Software:/var/www/CMS-Dashboard$ sudo chmod 755 /home/tamil/CMS-Dashboard-master
+mod 755 /home/tamil/CMS-Dashboard-master/www
+sudo chmod 644 /home/tamil/CMS-Dashboard-master/www/index.html
+
+# Change ownership if necessary (replace 'www-data' with the actual Nginx user if different)
+sudo chown www-data:www-sudo chmod 755 /home/tamil/CMS-Dashboard-master/www
+sudo chmod 644 /home/tamil/CMS-Dashboard-master/www/index.html
+
+# Change ownership if necessary (replace 'www-data' with the actual Nginx user if different)
+sudo chown www-data:www-data /home/tamil/CMS-Dashboard-master
+sudo chown www-data:www-data /home/taboard-master/www
+sudo chown www-data:wwtamil@Software:/var/www/CMS-Dashboard$ mil/CMS-Dashboard-master/www
+w-data /-bash: mil/CMS-Dashboard-master/www: No such file or directory
+tamil@Software:/var/www/CMS-Dashboard$ sudo chown www-data:www-data /home/tamil/CMS-Dashboard-master/www/index.html
+chown: cannot access '/home/tamil/CMS-Dashboard-master/www/index.html': No such file or directory
+tamil@Software:/var/www/CMS-Dashboard$ sudo chmod 755 /home/tamil/CMS-Dashboard-master
+tamil@Software:/var/www/CMS-Dashboard$ sudo chown www-data:www-data /home/tamil/CMS-Dashboard-master/www
+tamil@Software:/var/www/CMS-Dashboard$ ls
+3rdpartylicenses.txt  browser
+tamil@Software:/var/www/CMS-Dashboard$ sudo chown www-data:www-data /home/tamil/CMS-Dashboard-master/www/browser
+tamil@Software:/var/www/CMS-Dashboard$ sudo systemctl restart nginx
+tamil@Software:/var/www/CMS-Dashboard$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+tamil@Software:/var/www/CMS-Dashboard$ sudo systemctl restart nginx
+tamil@Software:/var/www/CMS-Dashboard$  sudo chmod 755 /home/tamil/CMS-Dashboard-master
+tamil@Software:/var/www/CMS-Dashboard$ sudo chmod 644 /home/tamil/CMS-Dashboard-master/www/browser/index.html
+tamil@Software:/var/www/CMS-Dashboard$ 404 Not Found
+nginx/1.24.0 (Ubuntu)404: command not found
+tamil@Software:/var/www/CMS-Dashboard$ sudo nano /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:/var/www/CMS-Dashboard$ ls -l /etc/nginx/sites-enabled/
+total 0
+lrwxrwxrwx 1 root root 46 Sep  2 11:52 dashboard.tamil.com -> /etc/nginx/sites-available/dashboard.tamil.com
+tamil@Software:/var/www/CMS-Dashboard$ sudo chown -R www-data:www-data /var/www/CMS-Dashboard/
+do chmod -R 755 /var/www/CMS-Dashboard/
+sudo chmod -R 755 /var/www/CMS-Dashboard/
+tamil@Software:/var/www/CMS-Dashboard$ sudo systemctl restart nginx
+tamil@Software:/var/www/CMS-Dashboard$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+tamil@Software:/var/www/CMS-Dashboard$ sudo tail -f /var/log/nginx/error.log
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [error] 4880#4880: *4 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+^C
+tamil@Software:/var/www/CMS-Dashboard$ sudo tail -f /var/log/nginx/error.log
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [crit] 4880#4880: *4 stat() "/home/tamil/CMS-Dashboard-master/www/index.html" failed (13: Permission denied), client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+2024/09/02 09:38:41 [error] 4880#4880: *4 rewrite or internal redirection cycle while internally redirecting to "/index.html", client: 172.17.112.1, server: dashboard.tamil.com, request: "GET /favicon.ico HTTP/1.1", host: "dashboard.tamil.com", referrer: "http://dashboard.tamil.com/"
+
