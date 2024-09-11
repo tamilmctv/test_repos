@@ -1,0 +1,14 @@
+---------------------------------PC setup and configuration----------------------------------------------------
+Step-1 :remove  or disable the background running apps 
+        #by control panel --->uninstall the unnecessary programs
+	# in settings apps and features --> remove unwanted apps 
+Step-2 :disable location,remote access in settings  
+
+Step-3 :Task manager --> disable the unwanted startapps and make the necesary files to start app(bvc.exe)
+
+Step-4 : make the sleep options to never # make the screen awake at all the time 
+
+--------------------To setup the pc with the software---------------------------------------------
+1. Check the Bvc exe  file runs properly and make the change in video 
+2. Make it as startup app
+3.Note the configurations of Ip and Mac of the system
