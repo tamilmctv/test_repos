@@ -1,0 +1,43 @@
+1. Start mysql,api,dashboard
+2. Register the new account for user by postman 
+
+	# first login
+	# COPY token and paste in body atauthorization with :Bearer Key
+	# then register - http://localhost:5095/api/accounts/register
+		{
+    "email":"sep@2024",
+    "password": "19sep@2024",
+    "role": "Admin",
+    "vendorId":"99"
+    }
+
+3. creates id if vendor exist or else go to database and check by 
+	select * from vendors--> to see vendor exist or not 
+
+	add--> INSERT INTO vendors (Id, Name, ShortName, CreatedOn, IsActive)
+VALUES (1, 'BVC', 'BVC', '2024-09-18 18:34:04', 1);
+
+4 . then register the account 
+
+
+to register the machine ---> INSERT INTO Machines
+	    (
+	         Id, VendorId, AppType, MachineNumber, Name, Location, Status,
+	       CreatedOn, UpdatedOn, IsActive, PgSettingId, Mac, ConnectionId
+	     )
+	     VALUES
+	     (
+	         'A1B112CC65EE4E7EBFFB0648B71B688C',
+	         99,
+	       'VM',
+	         1,
+	        'TamilLocalVendingmachine',
+	         'BVC-Office',
+	         'Offline',
+	         '2024-09-19 11:51:30',
+	       '2024-09-19 11:55:30',
+	         1,
+	        1,
+	         'DC4A3E3DBFFE',
+	         1
+	     );
