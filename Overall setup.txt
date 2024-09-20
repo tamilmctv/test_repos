@@ -1,9 +1,14 @@
 1. Start mysql,api,dashboard
 2. Register the new account for user by postman 
 
-	# first login
+	# first login --> http://localhost:5095/api/accounts/login
+{
+    "username": "siva@bvc24.com",
+    "password": "S!va.BVC@1"
+ 
+}
 	# COPY token and paste in body atauthorization with :Bearer Key
-	# then register - http://localhost:5095/api/accounts/register
+	# then register --> http://localhost:5095/api/accounts/register
 		{
     "email":"sep@2024",
     "password": "19sep@2024",
@@ -17,10 +22,52 @@
 	add--> INSERT INTO vendors (Id, Name, ShortName, CreatedOn, IsActive)
 VALUES (1, 'BVC', 'BVC', '2024-09-18 18:34:04', 1);
 
-4 . then register the account 
+4 . then register the company (that prints in bill)-->INSERT INTO companies (Id, Name, Address, Phone, GstNumber, VendorId) 
+VALUES (1, 'TT', '2/85,Elanagar,Elanagar(p/o),Tiruchengode(t/k),Namakkal(d/t)-637212', '9629828969', 'GST123456789', '8');
 
 
-to register the machine ---> INSERT INTO Machines
+5.register the pg_settings --> (INSERT INTO pgsettings (Id, GatewayName, ProviderId, ProviderName, MerchantId, MerchantName, MerchantVPA, MerchantKey, Mcc, KeyIndex, BaseURL, PublicKeyPath, PrivateKeyPath, VendorId) 
+VALUES 
+(1, 'PhonePe', 'Tamil', 'Tamilmctv', 'TT', 'Tamil', 'TAMILMCTV@ybl', ' 30090e90-3a37-4fb1-b677-444ea3b2ee48 ', '5734', 0, ' https://mercury-uat.phonepe.com/enterprise-sandbox ', 'NULL', 'Null', 8);
+)
+
+
+Here's a sample SQL INSERT query for your table with the specified fields, along with explanations for each field:
+
+SQL Insert Query
+sql
+
+INSERT INTO pgsettings (Id, GatewayName, ProviderId, ProviderName, MerchantId, MerchantName, MerchantVPA, MerchantKey, Mcc, KeyIndex, BaseURL, PublicKeyPath, PrivateKeyPath, VendorId) 
+VALUES 
+(1, 'PhonePe', 'Tamil', 'Tamilmctv', 'TT', 'Tamil', 'TAMILMCTV@ybl', ' 30090e90-3a37-4fb1-b677-444ea3b2ee48 ', '5734', 0, 'https://mercury-uat.phonepe.com/enterprise-sandbox', 'NULL', 'Null', 8);
+
+
+****************************Field Explanations**********************************************
+# Id: Unique identifier for each entry (e.g., 1, 2, etc.).
+# GatewayName: The name of the payment gateway (e.g., 'PaymentGatewayX').
+# ProviderId: Unique identifier for the payment provider (e.g., 'P001').
+#ProviderName: Name of the payment provider (e.g., 'ProviderOne').
+#MerchantId: Unique identifier for the merchant (e.g., 'M001').
+#MerchantName: Name of the merchant (e.g., 'MerchantXYZ').
+#MerchantVPA: Merchant Virtual Payment Address, often used in UPI transactions (e.g., 'merchant@example.com').
+#MerchantKey: Security key associated with the merchant account for API authentication (e.g., 'merchantKey123').
+#Mcc: Merchant Category Code, a four-digit number that classifies the merchant's business type (e.g., '1234').
+#KeyIndex: Index for identifying the key (e.g., 0 for the first key).
+#BaseURL: The base URL for the API of the payment gateway (e.g., 'https://api.paymentgatewayx.com').
+#PublicKeyPath: Path to the public key file for encryption (e.g., '/path/to/public_key.pem').
+#PrivateKeyPath: Path to the private key file for decryption (e.g., '/path/to/private_key.pem').
+#VendorId: Unique identifier for the vendor associated with the merchant (e.g., 'V001').
+
+
+------------------------------To onboard--------------------------
+1.VPA
+2.MCC
+3.Baseurl
+4.MerchantKey
+
+
+
+6. to register the machine ---> INSERT INTO Machines
 	    (
 	         Id, VendorId, AppType, MachineNumber, Name, Location, Status,
 	       CreatedOn, UpdatedOn, IsActive, PgSettingId, Mac, ConnectionId
@@ -41,3 +88,7 @@ to register the machine ---> INSERT INTO Machines
 	         'DC4A3E3DBFFE',
 	         1
 	     );
+
+
+----------------------------------------AWS CLI mysql------------------
+mysql -u remote_user -p -h your_instance_public_dns_or_ip
