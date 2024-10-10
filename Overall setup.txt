@@ -3,8 +3,8 @@
 
 	# first login --> http://localhost:5095/api/accounts/login
 {
-    "username": "siva@bvc24.com",
-    "password": "S!va.BVC@1"
+    "username": "abcd.com",
+    "password": "Sacfa.BVC@1"
  
 }
 	# COPY token and paste in body atauthorization with :Bearer Key
