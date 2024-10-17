@@ -1,0 +1,24 @@
+-----------------------------------------------------------------------login aws instance without the private key--------------------------------------------------------------------
+
+
+
+---> open ubuntu and login to your aws account by 
+	# aws configure it --> it will ask for access key,password,zone etc
+
+and then follow the process to login to your aws instance
+
+	1)ssh-keygen -t rsa -f my_key
+
+	2)aws ec2-instance-connect send-ssh-public-key \
+ 	  --region ap-south-1 \
+  	  --availability-zone ap-south-1b \
+          --instance-id xxxxxxxxxx\
+    	  --instance-os-user xxxxxx \
+          --ssh-public-key file:xxxxxxxx.pub
+
+
+	3)ssh -o "IdentitiesOnly=yes" -i xxx(key) ubuntu@xx.xx.xx.xx(public ip)
+
+
+
+-----------------------------------------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------------------------------------------------------------------
