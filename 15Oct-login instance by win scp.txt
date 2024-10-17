@@ -1,0 +1,21 @@
+----------------------login instance by using winscp-------------
+1.dwonload win scp and install on your windows
+
+2.Now open the app and you will see teh following fields
+	#file protocol
+	#Host name 
+	#Port number
+	#username & password
+
+
+3.Now fill the fields by 	
+	#file protocol - choose SFTP
+	#Host name - your public ip 
+	#Port number - port number
+	#username - your instance username
+	#password - null(empty)
+
+4. Now click advanced options -------> SSH---------> Authentication-----> choose privatekey file -----> click ok---> save ----> click login
+
+
+#### Now you able to view the see the instance on right side and on left side you can see the local folder and some menus.
