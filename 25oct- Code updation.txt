@@ -1,0 +1,20 @@
+--------------------------Updation of code -------------------------
+
+1. Copy the new application file code to C drive
+
+2. Now copy the videos,log,reports, if database needed.
+
+3. Then paste into the new application file code  and check whether the total number of files matches with the old application file.
+
+4. Then replace appsettings.json for machineid,link and the fields of payment by refering the old application file.
+
+5. So that the payment settings and configuration will not be changed from the previous one and the internet connectivity will be connected to the system.
+
+6. Then pin quick access to the logs, videos, BVC file 
+
+7. Now give full control to the BVC file, Bvc.exe and to the appsettings.json by 
+
+
+	Right Click on the file ---------> properties------->security------->edit---------------->select users--------->tick the option the full control,modify ,write (tick all options)---> click apply and okk
+
+8. Now run the application and check whether it runs properly or not.
