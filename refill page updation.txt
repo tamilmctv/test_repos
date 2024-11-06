@@ -1,0 +1,121 @@
+===================================================================In refill page  to add the tray more=============================================================================
+
+
+--------------------------------------------------------------------IN VM file------------------------------------------------------------------------------------------------------
+
+#SpiralSettingPage.xaml
+-------------------------------------
+	--> Change the lines of the code to your respective total number of products in tray by rows and columns that u need
+
+	  <ItemsControl.ItemsPanel>
+     		 <ItemsPanelTemplate>
+          		<UniformGrid Columns="10" Rows="9" />
+      		</ItemsPanelTemplate>
+	  </ItemsControl.ItemsPanel>
+
+#then look for the file SyncService.cs 
+-----------------------------------------
+
+	-----> Change the lines of the code that u need the total number of products in tray as
+
+	public async Task InitMotorSettings(){
+   	 try
+  	  {
+       	 if (!dbContext.MotorSettings.Any())
+       	 {
+            for (int i = 1; i <= 90; i++)==========================================>the line u want to change 
+            {
+                await dbContext.MotorSettings.AddAsync(
+                    new MotorSetting()
+                    {
+                        Id = i,
+                        CabinId = 1,
+                        MotorNumber = i,
+                        ProductId = string.Empty,
+                        Capacity = 3,
+                        Stock = 0,
+                        SoldOut = false,
+                        UpdatedOn = DateTime.Now,
+                        IsViewed = false,
+                        IsActive = true
+                    });
+            }
+
+            await dbContext.SaveChangesAsync();
+       		 }
+
+        if (DataStore.CabinCount == 2 && !dbContext.MotorSettings.Any(x => x.CabinId == 2))
+       	 {
+
+            int lastId = await dbContext.MotorSettings.MaxAsync(x => x.Id);
+
+           	 for (int i = 1; i <= 90; i++)============================================>the line u want to change 
+          			  {
+               		 lastId++;
+               		 await dbContext.MotorSettings.AddAsync(
+                   		 new MotorSetting()
+                    {
+                        Id = lastId,
+                        CabinId = 2,
+                        MotorNumber = i,
+                        ProductId = string.Empty,
+                        Capacity = 3,
+                        Stock = 0,
+                        SoldOut = false,
+                        UpdatedOn = DateTime.Now,
+                        IsViewed = false,
+                        IsActive = true
+                    });
+            }
+
+            await dbContext.SaveChangesAsync();
+        }
+
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex.Message, ex);
+    }
+}
+
+	===> in loop change the number of loops as it is the count of product on two lines
+
+==========================================***************************************************============================================================================================
+#Refillpage.xaml
+------------------------------
+
+      ==>Add these to line to stackpanel section that create the row for additional trays and partions
+
+
+	  <ItemsControl Name="lstRow7"> ===========>change number according to previos trays
+      <ItemsControl.ItemTemplate>
+          <DataTemplate>
+              <uc:ItemRefill
+                      Margin="10"
+                      Click="item_Click"
+                      MotorNumber="{Binding MotorNumber}" />      
+          </DataTemplate>
+      </ItemsControl.ItemTemplate>
+      <ItemsControl.ItemsPanel>
+          <ItemsPanelTemplate>
+              <UniformGrid Rows="1" />
+          </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+  	</ItemsControl>
+
+	# then save the file
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Refillpage.xaml.cs
+-----------------------------
+
+	==>Add this lines in the Load refillitem() function and 
+
+
+	 lstRow7.ItemsSource = settings.Where(x => x.MotorNumber >= 61 && x.MotorNumber <= 70).ToList(); ----> change rows according to the tray  
+
+--------------------------------**************************************************************---------------------------------------------------------------------------------
+
+Now clean the solution and delete the old build file and build it again 
+
+================================================================As the changes will be done correctly=============================================================================
